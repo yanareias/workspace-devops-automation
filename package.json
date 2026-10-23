@@ -1,0 +1,32 @@
+{
+  "name": "workspace-devops-automation",
+  "version": "1.0.0",
+  "description": "Projeto DevOps Automation com CI/CD e Vercel",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "lint": "eslint .",
+    "test": "jest --runInBand",
+    "test:unit": "jest --runInBand",
+    "test:integration": "jest --runInBand --testPathPatterns=integration",
+    "test:coverage": "jest --coverage --runInBand",
+    "test:perf": "node scripts/perf.js",
+    "build": "node scripts/build.js",
+    "audit:prod": "npm audit --omit=dev"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0",
+    "jest": "^30.5.2",
+    "supertest": "^7.3.1"
+  }
+}
